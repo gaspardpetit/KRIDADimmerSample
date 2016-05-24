@@ -182,6 +182,7 @@ void printResults(unsigned long counter)
 void loop() {
 
   DELAY_AND_OPEN_STRATEGY = DelayAndOpen;
+
   Serial.println("USING BLOCKING STRATEGY");
 
   for (int i = 10; i <= 90; i += 10)
@@ -198,7 +199,7 @@ void loop() {
   DELAY_AND_OPEN_STRATEGY = DelayAndOpenAsync;
   Serial.println("USING ASYNC STRATEGY");
 
-  for (int i = 0; i <= 100; i += 10)
+  for (int i = 10; i <= 90; i += 10)
   {
     dimming = i;
     unsigned long start = micros();
